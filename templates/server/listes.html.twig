@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Liste des servers{% endblock %}
+
+{% block body %}
+  <h1> Liste des servers </h1>
+  {% for serv in servers %}
+   
+    <ul>
+    <li>
+      <tr>
+            <td>{{ serv.name }}</td>
+            <td> ,{{ serv.freq_prop }}</td>
+            <td> ,{{ serv.taille_m }}</td>
+            <td> et {{ serv.taille_db }}</td>
+      </tr>
+      </li>
+    </ul>
+   {% endfor %}
+   
+{% endblock %}
